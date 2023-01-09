@@ -13,5 +13,5 @@
 
 ## Notebooks
 
-
+(https://github.com/ctalladen78/WBSbootcamp23/blob/master/week1/week1.ipynb)[https://github.com/ctalladen78/WBSbootcamp23/blob/master/week1/week1.ipynb]
  
