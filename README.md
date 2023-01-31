@@ -5,9 +5,11 @@
 
 ## Sections
 * Week 1 : SQL, Tableau
-* Week 2 : Python, pandas
-* Week 3
-* Week 4:
+* Week 2 : pandas intro
+* Week 3 : pandas visualization
+* Week 4 : pandas intermediate
+* Week 5 : statistics, a/b testing, google marketing platform
+* Week 6 : data engineering with AWS
 
 
 
@@ -17,3 +19,7 @@ Week 1
  
  Week 2
 [https://github.com/ctalladen78/WBSbootcamp23/blob/master/week3/eniac2.ipynb](https://github.com/ctalladen78/WBSbootcamp23/blob/master/week3/eniac2.ipynb)
+
+
+## Articles
+[Building an automated data pipeline with AWS lambda & pandas for data engineering projects | by Cyrus Talladen | Jan, 2023 | Medium](https://medium.com/@cytalladen/building-an-automated-data-pipeline-with-aws-lambda-pandas-for-data-engineering-projects-7230740a27b7)
