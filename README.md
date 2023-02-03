@@ -1,7 +1,7 @@
 
 # Data Science Portfolio
 
-### Last update: 9 January 2023
+#### Last update: 31 January 2023
 
 ## Sections
 * Week 1 : SQL, Tableau
@@ -22,4 +22,4 @@ Week 1
 
 
 ## Articles
-[Building an automated data pipeline with AWS lambda & pandas for data engineering projects | by Cyrus Talladen | Jan, 2023 | Medium](https://medium.com/@cytalladen/building-an-automated-data-pipeline-with-aws-lambda-pandas-for-data-engineering-projects-7230740a27b7)
+[Building an automated data pipeline with AWS for data engineering projects](https://medium.com/@cytalladen/building-an-automated-data-pipeline-with-aws-lambda-pandas-for-data-engineering-projects-7230740a27b7)
