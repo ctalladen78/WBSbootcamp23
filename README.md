@@ -1,24 +1,21 @@
 
 # Data Science Portfolio
 
-#### Last update: 31 January 2023
+#### Last update: 18 February 2023
 
 ## Sections
 * Week 1 : SQL, Tableau
-* Week 2 : pandas intro
-* Week 3 : pandas visualization
-* Week 4 : pandas intermediate
-* Week 5 : statistics, a/b testing, google marketing platform
-* Week 6 : data engineering with AWS
+* Week 2 : Pandas intro
+* Week 3 : Pandas visualization
+* Week 4 : Pandas intermediate EDA
+* Week 5 : Statistics, a/b testing, google marketing platform
+* Week 6 : Data engineering with AWS
+* Week 7 : Unsupervised learning, cluster analysis
 
 
 
-## Notebooks
-Week 1
-[https://github.com/ctalladen78/WBSbootcamp23/blob/master/week1/week1.ipynb](https://github.com/ctalladen78/WBSbootcamp23/blob/master/week1/week1.ipynb)
- 
- Week 2
-[https://github.com/ctalladen78/WBSbootcamp23/blob/master/week3/eniac2.ipynb](https://github.com/ctalladen78/WBSbootcamp23/blob/master/week3/eniac2.ipynb)
+## Data sources
+[https://github.com/ctalladen78/WBSbootcamp23/tree/master/static_data](https://github.com/ctalladen78/WBSbootcamp23/tree/master/static_data)
 
 
 ## Articles
