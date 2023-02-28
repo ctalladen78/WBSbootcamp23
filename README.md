@@ -11,7 +11,7 @@
 * Week 5 : Statistics, a/b testing, google marketing platform
 * Week 6 : Data engineering with AWS
 * Week 7 : Unsupervised learning, cluster analysis
-
+* Week 8 : Supervised learning
 
 
 ## Data sources
