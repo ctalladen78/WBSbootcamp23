@@ -25,5 +25,4 @@
 [Cyrus Talladen | Tableau Public ](https://public.tableau.com/app/profile/cy.talladen)
 
 ## Competitions
-kaggle profile
-[Cyrus Talladen | Kaggle ](https://www.kaggle.com/ctalladen78)
+[Cyrus Talladen | Kaggle Competitions ](https://www.kaggle.com/ctalladen78)
