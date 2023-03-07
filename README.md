@@ -14,15 +14,15 @@
 * Week 8 : Supervised learning
 * Week 9 : Metrics
 
-## Data sources
+## 💻 Data sources
 [https://github.com/ctalladen78/WBSbootcamp23/tree/master/static_data](https://github.com/ctalladen78/WBSbootcamp23/tree/master/static_data)
 
 
-## Articles
+## 📚 Articles
 [Building an automated data pipeline with AWS for data engineering projects](https://medium.com/@cytalladen/building-an-automated-data-pipeline-with-aws-lambda-pandas-for-data-engineering-projects-7230740a27b7)
 
-## Dashboards
+## 📊 Dashboards
 [Cyrus Talladen | Tableau Public ](https://public.tableau.com/app/profile/cy.talladen)
 
-## Competitions
+## 🎖 Competitions
 [Cyrus Talladen | Kaggle Competitions ](https://www.kaggle.com/ctalladen78)
