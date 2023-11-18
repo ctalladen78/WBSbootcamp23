@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 import pickle
 import openai
 from PyPDF2 import PdfReader
-# from streamlit_extras.add_vertical_space import add_vertical_space
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
@@ -11,15 +10,6 @@ from langchain.llms import OpenAI
 from langchain.chains.question_answering import load_qa_chain
 from langchain.callbacks import get_openai_callback
 import os
-
-from dotenv import load_dotenv,find_dotenv
-load_dotenv(find_dotenv())
-
-# print(os.environ.get("OPEN_AI_KEY"))
-# openai.api_key = "sk-"
-os.environ["OPENAI_API_KEY"] = "sk-"
-
-llm = OpenAI()
 
 
 # Sidebar contents
@@ -33,54 +23,18 @@ with st.sidebar:
     - [OpenAI](https://platform.openai.com/docs/models) LLM model
 
     ''')
-    # add_vertical_space(5)
-    st.write('Made by [Faruk Alam](https://youtube.com/@engineerprompt)')
-
-
-def make_response():
-    docs = VectorStore.similarity_search(query=query, k=3)
     
-    chain = load_qa_chain(llm=llm, chain_type="stuff")
-    with get_openai_callback() as cb:
-        response = chain.run(input_documents=docs, question=query)
-        print(cb)
-    st.write(response)
-
 
 def main():
     st.header("Chat with pdf")
-
-    vdb = st.file_uploader("Upload pickle file", type='pkl')
     
-    # upload a pdf file
+    with st.sidebar:
+        openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
+        "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
+
+# upload a pdf file
     pdf = st.file_uploader("Upload your PDF", type='pdf') 
-    query = None
-
-    if vdb is not None:
-        """
-        """
-        pdf = None
-        VectorStore = pickle.load(vdb)
-
-        # if os.path.exists(f"{store_name}.pkl"):
-        #     with open(f"{store_name}.pkl", "rb") as f:
-        #         VectorStore = pickle.load(f)
-        st.write('Embeddings Loaded from the Disk')
-
-        query = st.text_input("Ask questions about your PDF file:")
-            # st.write(query)
-        
-        
-        if query is not None:
-            docs = VectorStore.similarity_search(query=query, k=3)
-    
-            # llm = OpenAI()
-            chain = load_qa_chain(llm=llm, chain_type="stuff")
-            with get_openai_callback() as cb:
-                response = chain.run(input_documents=docs, question=query)
-                print(cb)
-            st.write(response)
-            # make_response()
+    query = st.text_input("Ask questions about your PDF file:")
 
     
     
@@ -110,25 +64,23 @@ def main():
         #     with open(f"{store_name}.pkl", "rb") as f:
         #         VectorStore = pickle.load(f)
         #     st.write('Embeddings Loaded from the Disk')
-        # else:
-        #     embeddings = OpenAIEmbeddings()
-        #     VectorStore = FAISS.from_texts(chunks, embedding=embeddings)
-        #     with open(f"{store_name}.pkl", "wb") as f:
-        #         pickle.dump(VectorStore, f)
+        
  
-        embeddings = OpenAIEmbeddings()
+        embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
         VectorStore = FAISS.from_texts(chunks, embedding=embeddings)
-        with open(f"{store_name}.pkl", "wb") as f:
-            pickle.dump(VectorStore, f)
+        st.write("Embeddings Loaded")
+        # with open(f"{store_name}.pkl", "wb") as f:
+        #     pickle.dump(VectorStore, f)
 
         # Accept user questions/query
-        query = st.text_input("Ask questions about your PDF file:")
+        # query = st.text_input("Ask questions about your PDF file:")
         # st.write(query)
  
         if query:
+            st.write(query)
             docs = VectorStore.similarity_search(query=query, k=3)
  
-            # llm = OpenAI()
+            llm = OpenAI(openai_api_key=openai_api_key)
             chain = load_qa_chain(llm=llm, chain_type="stuff")
             with get_openai_callback() as cb:
                 response = chain.run(input_documents=docs, question=query)
