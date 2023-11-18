@@ -1,0 +1,6 @@
+streamlit
+tensorflow
+pandas
+numpy
+pretty_midi
+tempfile
